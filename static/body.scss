@@ -1,0 +1,1636 @@
+@use "sass:color";
+
+
+$all_black_font_background: rgb(0,0,0);
+$all_gold_font_background: rgba(255, 190, 88, 1) !important;
+$all_aquamarine_font_background: aquamarine !important;
+$all_white_font_background: rgb(255, 255, 255)!important;
+$all_cyan_font_background:rgb(23, 107, 111);
+$all_navy_font_background: rgb(8, 57, 96); 
+$all_border_line:rgb(54, 63, 72);
+
+
+
+$responsive_desktop_:2500px;
+$responsive_desktop_small_:1500px;
+
+
+$responsive_tablet_:1200px;
+$responsive_tablet_small_:900px;
+
+$responsive_phone_:700px;
+$responsive_phone_small_:500px;
+
+
+@mixin desktop {
+    @media (min-width:  #{$responsive_desktop_small_} ) and (max-width: #{$responsive_desktop_}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:  #{$responsive_tablet_small_} ) and (max-width: #{$responsive_tablet_}) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (min-width:  #{$responsive_phone_small_} ) and (max-width: #{$responsive_phone_}) {
+        @content;
+    }
+}
+
+@mixin body_big_screen{
+
+    max-width:0%;
+    min-width:0%;
+    text-overflow: clip;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    text-wrap: wrap;
+    background-color: $all_cyan_font_background;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+@mixin body_medium_screen
+{
+    max-width:0%;
+    min-width:0%;
+    text-overflow: clip;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    text-wrap: wrap;
+    background-color: $all_white_font_background;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin body_small_screen
+{
+    max-width:0%;
+    min-width:0%;
+    text-overflow: clip;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    text-wrap: wrap;
+    background-color: $all_white_font_background; 
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin big_head_section
+{
+    width:2000px;
+    height:130px;
+    border-bottom:12px solid $all_cyan_font_background;
+    box-sizing: border-box;
+    padding: 0%;
+    margin-bottom:100%;
+    background-color: $all_gold_font_background;
+    color:$all_white_font_background;
+    position: fixed;
+    z-index: 5;
+}
+@mixin big_main_header
+{
+    display: flex;
+    flex-direction: row;
+    padding:2%;
+    margin:0%;
+    width:2000px !important;
+}
+@mixin big_logo
+{
+    flex-flow: column;
+    background-image: url("././Screenshot_2024-05-11_at_22.11.54-removebg-preview-2-removebg-preview.png") !important;
+    width:180px !important;
+    height:100px !important;
+    z-index: 2;
+    margin:-2%;
+    align-items: flex-start;
+}
+@mixin big_right_
+{
+    display:flex;
+    flex-direction: row;
+    float: right;
+    margin-left:45%;
+    width:1000px;
+    z-index: 0;
+}
+@mixin big_about_
+{
+    display: inline-flex;
+    font-size: 20px;
+    text-align: center;
+    padding-right:2%;
+    border-radius: 25px !important;
+    padding:2% !important;
+    height:auto !important;
+    width:auto !important;
+    background-color: $all_cyan_font_background;
+    margin-right:2%;
+    cursor: pointer !important;
+}
+@mixin big_stack_
+{
+    font-size: 20px;
+    text-align: center;
+    padding-right:2%;
+    border-radius: 25px !important;
+    padding:2% !important;
+    height:auto !important;
+    width:auto !important;
+    background-color: $all_cyan_font_background;
+    margin-right:2%;
+    cursor: pointer !important;
+}
+@mixin big_Projects_
+{
+    font-size: 20px;
+    text-align: center;
+    padding-right:2%;
+    border-radius: 25px !important;
+    padding:2% !important;
+    height:auto !important;
+    width:auto !important;
+    background-color: $all_cyan_font_background;
+    margin-right:2%;
+    cursor: pointer !important;
+}
+@mixin big_contact_
+{
+    font-size: 20px;
+    text-align: center;
+    padding-right:2%;
+    border-radius: 25px !important;
+    padding:2% !important;
+    height:auto !important;
+    width:auto !important;
+    background-color: $all_cyan_font_background;
+    cusor:pointer;
+    margin-right:2%;
+    cursor: pointer !important;
+}
+@mixin big_menu_line
+{
+    font-size: 30px !important;
+    color:$all_white_font_background;
+    cursor:pointer !important;
+
+}
+
+
+@keyframes big_hover_menu {
+    0%{
+
+        font-size: 30px !important;
+        font-weight: bolder(100% !important);
+        background-color: rgba(255, 190, 88, 1);
+        width:105px !important;
+        height:100px !important;
+        background-position: 0% left !important;
+        color: rgba(255, 190, 88, 1);
+
+    }
+    10%
+    {
+
+        font-size: 30px !important;
+        background-color:aquamarine ;
+        font-weight: bolder(100% !important);
+        width:120px !important;
+        height:100px !important;
+        background-position: 10% left !important;
+        color: rgba(255, 190, 88, 0.8);
+    }
+    20%
+    {
+        background-position: 20% left !important;
+        color: rgba(255, 190, 88, 0.6);
+        font-size: 30px !important;
+        background-color: rgb(23, 107, 111);
+        font-weight: bolder(100% !important);
+        width:135px !important;
+        height:100px !important;
+    }
+    40%
+    {
+        background-position: 40% center !important;
+        color: rgba(255, 190, 88, 0.8);
+        font-size: 30px !important;
+        background-color:  rgb(8, 57, 96);
+        font-weight: bolder(100% !important);
+        width:155px !important;
+        height:100px !important;
+    }
+    60%
+    {
+        color:$all_white_font_background;
+        font-size: 30px !important;
+        background-color: rgb(54, 63, 72);
+        font-weight: bolder(100% !important);
+        width:165px !important;
+        height:100px !important;
+    }
+    80%
+    {  
+        background-position: 60% center !important;
+        color: rgba(255, 190, 88, 0.6);
+        font-size: 30px !important;
+        background-color: rgba(255, 190, 88, 1);
+        font-weight: bolder(100% !important);
+        width:180px !important;
+        height:100px !important;
+    }
+   100%
+    {
+        font-size: 30px !important;
+        background-color: rgb(54, 63, 72);
+        color:$all_white_font_background;
+        font-weight: bolder(100% !important);
+        width:190px !important;
+        height:100px !important;
+        background-position: 80% right !important;
+        color: rgba(255, 190, 88, 0.8);
+
+    }
+ 
+}
+
+
+
+
+/* middle */
+
+
+@mixin middle
+{
+    
+    width:2000px;
+    height:1700px;
+    padding: 10%;
+    margin-top:50%;
+    background-color: $all_aquamarine_font_background;
+    color:$all_white_font_background;
+    z-index: 1;
+    line-height:130%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:$all_black_font_background;
+}
+@mixin big_image{
+    background-image: url('././e94fe5a283cf445a9651a000fa7d0ed4-removebg-preview.png');
+    margin-right:20%;
+    margin-top:5%;
+    float:right;
+    width:400px;
+    height: 450px;
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:25px;
+}
+@mixin big_container_profile_
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    align-items: flex-start;
+    width:700px;
+    height:300px;
+    padding: 0%;
+    background-color: $all_white_font_background;
+    color:$all_black_font_background;
+    z-index: 1;
+    line-height:130%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color:$all_black_font_background;
+    border: 15px solid $all_border_line;
+    box-shadow: 5px 5px 5px 5px  snow inset, 5px 5px 5px 5px  snow inset, 5px 5px 5px 5px  snow inset, 5px 5px 5px 5px  snow inset;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-left:9%;
+    margin-top: 7%;
+    padding:5%;
+
+}
+@mixin big_profile_summary
+{
+    font-weight:bolder;
+    font-size: 28px;
+    color:$all_black_font_background;      
+}
+@mixin big_profile
+{
+    font-weight:bolder;
+    font-size: 20px;
+    color:$all_black_font_background;
+    padding:2%;
+}
+@mixin tech_stack
+{
+    display:flex;
+    flex-direction: column;
+    flex-flow:row;
+    order:9;
+    background-color: $all_cyan_font_background;
+    width:2000px;
+    height:700px;
+    align-items: center;
+    padding: 5%;
+}
+@mixin a
+{
+    margin:0%;
+    padding:0%;
+}
+@mixin html_
+{
+    flex-direction: column;
+    flex-flow:row;
+    columns:1;
+    order:1;
+    font-size:250px;
+    color:orange;
+    z-index: 2;
+}
+@mixin fa
+{
+    font-size: 250px !important;
+    padding-top: 5%;
+    margin-top: 5%;
+    margin-left:0%;
+    color:$all_white_font_background;
+    z-index: 2;
+}
+@mixin css3
+{
+    font-size: 250px !important;
+    flex-direction: column;
+    flex-flow:row;
+    columns:1;
+    order:2;
+    color:deepskyblue;
+    z-index: 2;
+}
+@mixin sass
+{
+    font-size: 250px !important;
+    flex-direction: column;
+    column: 1;
+    order: 3;
+    color:pink;
+    z-index: 2;
+}
+@mixin b
+{
+    margin:0%;
+    padding:0%;
+}
+@mixin jquery_
+{
+    background-image: url('././Screenshot_2024-05-12_at_04.35.20-removebg-preview\ \(3\).png');
+    flex-direction: column;
+    flex-flow: row;
+    column:1;
+    order: 1;
+    margin-top:0%;
+    padding-top: 0%;
+    margin-left: 35%;
+    color:$all_white_font_background;
+    z-index: 2;
+    width: 200px;
+    height:220px;
+    
+}
+@mixin javascript_
+{
+    background-image: url('././Screenshot_2024-05-12_at_06.29.09-removebg-preview\ \(1\).png');
+    flex-direction: column;
+    flex-flow: row;
+    column:1;
+    order: 2;
+    margin-top:40%;
+    padding-top:0%;
+    margin-left: 35%;
+    color:$all_white_font_background;
+    z-index: 2;
+    width: 200px;
+    height:200px;
+}
+@mixin brython_
+{
+    //background-image: url('./Screenshot_2024-05-12_at_06.45.43-removebg-preview.png');
+    flex-direction: column;
+    flex-flow: row;
+    column:1;
+    order: 3;
+    padding-top: 0%;
+    margin-top:40%;
+    margin-left: 35%;
+    color:$all_white_font_background;
+    z-index: 2;
+    font-size: 150px;
+    text-align: center;
+    background-color: rgb(23, 107, 111);
+    width:200px !important;
+    height:200px;
+    border-radius: 25px;
+    border:3px solid rgb(34, 255, 255);
+}
+@mixin c_
+{
+    padding: 0%;
+    margin: 0%;
+    width:400px;
+}
+@mixin typescript_
+{
+    background-image: url('././images-removebg-preview.png');
+    flex-direction: column;
+    flex-flow: row;
+    column:1;
+    order: 1;
+    margin-top:10%;
+    padding-top: 0%;
+    margin-left: 65%;
+    color:$all_white_font_background;
+    z-index: 2;
+    width: 255px;
+    height:195px;
+}
+@mixin nodejs_
+{
+    background-image: url('././nodejs-removebg-preview\ \(2\).png');
+    flex-direction: column;
+    flex-flow: row;
+    column:1;
+    order: 2;
+    margin-top:20%;
+    padding-top:0%;
+    margin-left: 65%;
+    color:$all_white_font_background;
+    z-index: 2;
+    width: 210px;
+    height:240px;
+}
+@mixin express_
+{
+    background-image: url('././express-removebg-preview.png');
+    flex-direction: column;
+    flex-flow: row;
+    column:1;
+    order: 3;
+    margin-top:20%;
+    padding-top:0%;
+    margin-left: 65%;
+    color:$all_white_font_background;
+    z-index: 2;
+    width: 210px;
+    height:230px;
+}
+@mixin stacks_used_
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+    font-weight: bolder;
+    color:$all_black_font_background;
+    margin:3%;
+    margin-left: 14%;
+    text-wrap:wrap;
+    text-decoration: underline;
+    line-height: 99%;
+    background-color: rgb(119, 232, 211);
+    border-radius: 25px;
+    border:15px solid rgb(223, 187, 5);
+    width: 300px !important;
+    height:300px !important;
+    box-shadow: 15px 15px 15px  15px rgb(255,255,255) unset;
+    text-align: center;
+    padding:1%;
+}
+@mixin a3
+{
+    display:flex;
+    flex-direction:column;
+    order:3;
+    margin-top:0%;
+    margin-left:4%;
+}
+@mixin projects_{
+    margin-top:15%;
+    padding-top: 0%;
+    margin-left: 14%;
+    text-wrap:wrap;
+    width:2000px;
+    height:1200px;
+    background-color: $all_cyan_font_background;
+}
+@mixin project1_
+{
+    margin-bottom:5%;
+    background-image: url('././img4.png');
+    width:400px;
+    height:400px;
+    border-radius: 25px;
+    border: 15px solid $all_border_line;
+    z-index: 1;
+    border-bottom: 30px solid $all_aquamarine_font_background;
+    order:1;
+}
+@mixin uvcp
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:70%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin a_uvcp_
+{
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:45%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: $all_aquamarine_font_background;
+}
+@mixin project2_
+{
+    margin-bottom:5%;
+    background-image: url('././img3.png');
+    width:400px;
+    height:400px;
+    border-radius: 25px;
+    border: 15px solid $all_border_line;
+    z-index: 1;
+    border-bottom: 30px solid $all_aquamarine_font_background;
+    order:2;
+    
+}
+@mixin uvcl
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:70%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin a_uvcl__
+{
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:45%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: $all_aquamarine_font_background;
+}
+@mixin project3_
+{
+    margin-bottom:5%;
+    background-image: url('././img3.png');
+    width:400px;
+    height:400px;
+    border-radius: 25px;
+    border: 15px solid $all_border_line;
+    z-index: 1;
+    border-bottom: 30px solid $all_aquamarine_font_background;
+    order:3;
+    align-items:center;
+}
+@mixin st__
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:70%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin a_st__
+{
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:45%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: $all_aquamarine_font_background;
+}
+@mixin b3
+{
+    display:flex;
+    flex-direction:column;
+    order:3;
+    margin-top:-80%;
+    margin-left:35%;
+}
+@mixin project4_
+{
+    margin-bottom:5%;
+    background-image: url('././Screenshot\ 2024-03-24\ at\ 19.05.39.png');
+    width:400px;
+    height:400px;
+    border-radius: 25px;
+    border: 15px solid $all_border_line;
+    z-index: 1;
+    border-bottom: 30px solid $all_aquamarine_font_background;
+    order:1;
+            
+}
+@mixin ps__
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:70%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+}
+@mixin project5_
+{
+    margin-bottom:5%;
+    background-image: url('././Screenshot\ 2024-03-24\ at\ 19.05.39.png');
+    width:400px;
+    height:400px;
+    border-radius: 25px;
+    border: 15px solid $all_border_line;
+    z-index: 1;
+    border-bottom: 30px solid $all_aquamarine_font_background;         
+    order:2;
+}
+@mixin is__
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:70%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+}
+@mixin project6_
+{
+    margin-bottom:5%;
+    background-image: url("././Screenshot\ 2023-10-08\ at\ 11.15.42.png");
+    width:400px;
+    height:400px;
+    border-radius: 25px;
+    border: 15px solid $all_border_line;
+    z-index: 1;
+    border-bottom: 30px solid $all_aquamarine_font_background;         
+    order:3;
+}
+@mixin cg
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:70%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;            
+}
+@mixin a_cg
+{
+    background-color: $all_aquamarine_font_background;
+    display:flex;
+    flex-direction: column;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-top:0%;
+    font-size:30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;           
+}
+@mixin contactme_
+{
+    width:2000px;
+    height:1300px;
+    z-index: 1;
+    border-top: 30px solid $all_cyan_font_background; 
+    background-color: $all_gold_font_background;
+    margin-top:30%;        
+}
+@mixin ContactTitle
+{
+    background-color: $all_black_font_background;
+    text-align:center;
+    color:$all_white_font_background;
+    font-weight: bolder;
+    margin-left:34%;
+    font-size:30px;
+    margin-top:5%;
+    padding-top:2%;
+    border-radius:25px;
+    width:300px;
+    height:70px;
+    border:15px solid $all_aquamarine_font_background;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin form_
+{
+    background-color:$all_navy_font_background;
+    border-radius: 25px !important;
+    border: 30px solid $all_border_line !important;
+    margin-top:5%;
+    margin-left:24%;
+    width:600px;
+    height:600px;
+    align-items: center !important;
+}
+@mixin label_name
+{
+    text-align:left !important;
+    color:$all_white_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding-top:2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+@mixin field_name
+{
+    text-align:left !important;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding:2%;
+    width:400px;
+    height:10%;
+    border: 5px solid  rgba(255, 190, 88, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+@mixin label_email_
+{
+    text-align:left !important;
+    color:$all_white_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding-top:2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+@mixin field_emails_
+{
+    text-align:left !important;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding:2%;
+    width:400px;
+    height:10%;
+    border: 5px solid  rgba(255, 190, 88, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+@mixin label_subject_
+{
+    text-align:left !important;
+    color:$all_white_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding-top:2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin field_subjects_
+{
+    text-align:left !important;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding:2%;
+    width:450px;
+    height:10%;
+    border: 5px solid  rgba(255, 190, 88, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+
+}
+@mixin label_message_
+{
+    text-align:left !important;
+    color:$all_white_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding-top:2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin field_message_
+{
+    text-align:left !important;
+    color:$all_black_font_background;
+    font-weight: bolder;
+    margin-left:5%;
+    font-size:30px;
+    margin-top:5%;
+    padding:2%;
+    width:450px;
+    height:10%;
+    border: 5px solid  rgba(255, 190, 88, 0.6);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
+}
+@mixin btnsend_
+{
+    color:$all_border_line;
+    background-color:$all_aquamarine_font_background;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    margin-left:35%;
+    border:15px solid $all_border_line;
+    border-radius: 25px;
+    width:200px;
+    height:80px;
+    text-align: center;
+    margin-top: 10%;
+    cursor: pointer !important;
+    
+}
+@mixin contacttext_
+{
+    color:$all_white_font_background;
+    background-color:$all_white_font_background;
+    font-size: 50px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    width:2000px;
+    height:300px;
+    text-align:left;
+    text-wrap: wrap;
+    text-decoration: none;
+    margin-top: 8%;
+    padding-top: 0%;
+    margin-left:0%;
+    border-top: 15px solid $all_cyan_font_background;
+}
+@mixin getintouch_
+{
+    color:$all_black_font_background;
+    background-color:$all_white_font_background; 
+    font-size: 30px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    width:400px !important;
+    height:100px;
+    text-align: center !important;
+    text-wrap:wrap;
+    margin-left: 30%;
+    margin-top: 4%;
+    padding:3% !important;
+    text-decoration: underline;
+}
+@mixin Email_mailto
+{
+    position: absolute;
+    color:$all_white_font_background;
+    background-color:$all_cyan_font_background; 
+    font-size: 30px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    width:500px !important;
+    height:100px;
+    text-wrap:wrap;
+    top: 510%;
+    left: 8%;
+    padding-top: 3%;
+    text-align: center;
+}
+@mixin Phone_mobile
+{
+    position: absolute;
+    color:$all_white_font_background;
+    background-color:$all_cyan_font_background; 
+    font-size: 30px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    width:300px !important;
+    height:100px;
+    text-wrap:wrap;
+    top: 530%;
+    left: 8%;
+    padding-top: 3%;
+    text-align: center;
+}
+@mixin LinkedIn_
+{
+    position:absolute;
+    color:$all_navy_font_background;
+    background-color:$all_cyan_font_background; 
+    font-size: 30px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    width:600px !important;
+    height:70px;
+    text-wrap:wrap;
+    top: 510%;
+    left:69%;
+    padding-top: 3%;
+    text-align: center;
+}
+@mixin githubs_
+{
+    position:absolute;
+    color:$all_navy_font_background;
+    background-color:$all_cyan_font_background; 
+    font-size: 30px !important;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    width:600px !important;
+    height:50px;
+    text-wrap:wrap;
+    top: 4990px;
+    left:990px;
+    padding: 3%;
+    text-align: center !important;
+}
+@mixin footer
+{
+ 
+    padding:0%;
+    margin:0%;
+
+}
+@mixin container{
+    position:absolute !important;
+    color:$all_white_font_background;
+    //background-color:$all_navy_font_background;
+    width:2000px;
+    height:100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    top: 5300px;
+    left:0%;
+}
+@mixin footer_
+{
+    width:2000px;
+    height:100px;
+    padding: 0%;
+    margin:0%;
+
+}
+@mixin copyright_
+{
+    color:$all_white_font_background;
+    background-color:$all_gold_font_background;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top:3%;
+    margin-left:-15%;
+    text-align:center;
+}
+@mixin powered_by
+{
+    display:flex;
+    flex-direction: row;
+    order: 1;
+    align-items: center;
+    color:$all_white_font_background;
+    background-color:$all_navy_font_background;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;      
+}
+@mixin name__
+{
+    align-items: center;
+    color:$all_white_font_background;
+    background-color:$all_gold_font_background;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@mixin popup
+{  
+    position: absolute;
+    border:15px solid $all_border_line;
+    border-radius: 25px;
+    width:500px;
+    height:150px;
+    background-color:$all_navy_font_background;
+    z-index:4;
+    margin-top: 100%;
+    margin-left:30%;
+    margin-right:30%;
+}
+@mixin popup_
+{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color:$all_white_font_background;
+    padding:5%;
+}
+@mixin cross
+{
+    float: right;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    color:$all_white_font_background;
+    cursor: pointer !important;
+}
+
+
+
+
+
+body
+{
+
+    @include desktop{ 
+        @include body_big_screen;
+    } 
+
+    @include tablet{ 
+       @include body_medium_screen;
+    }
+
+    @include phone{ 
+        @include body_small_screen;
+    }
+    
+}
+.head
+{
+    @include desktop
+    {
+        @include big_head_section;
+    }
+} 
+.main-header
+{
+    @include desktop
+    {
+        @include big_main_header;
+    }
+} 
+.logo_
+{
+    @include desktop
+    {
+        @include big_logo;
+    }
+} 
+.right_
+{
+    @include desktop
+    {
+        @include big_right_;
+    }
+}
+.About_
+{
+    @include desktop
+    {
+        @include big_about_;
+    }
+}
+.About_:hover{
+    @include desktop
+    {
+        animation: big_hover_menu 7s alternate;
+    }
+}
+.Stack_
+{
+    @include desktop
+    {
+        @include big_stack_;
+    }
+}
+.Stack_:hover{
+    @include desktop
+    {
+        animation: big_hover_menu 3s alternate;
+    }
+}
+.Projects_
+{
+    @include desktop
+    {
+        @include big_Projects_;
+    }
+}
+.Projects_:hover{
+    @include desktop
+    {
+        animation: big_hover_menu 3s alternate;
+    }
+}
+.Contact_
+{
+    @include desktop
+    {
+        @include big_contact_;
+    }
+}
+.Contact_:hover
+{
+    @include desktop
+    {
+        animation: big_hover_menu 3s alternate;
+    }
+}
+.middle_
+{
+    @include desktop
+    {
+        @include middle;
+    }
+}
+.image_
+{
+    @include desktop
+    {
+        @include big_image;
+    }
+}
+.container_profile_
+{
+    @include desktop
+    {
+        @include big_container_profile_;
+    }
+}
+.AboutTitle_{
+    @include desktop
+    {
+        @include big_profile_summary;
+    }
+}
+.AboutText_
+{
+    @include desktop
+    {
+        @include big_profile;
+    }
+}
+.Tech_Stack_
+{
+    @include desktop
+    {
+        @include tech_stack;
+    }
+}
+.a_
+{
+    @include desktop
+    {
+        @include a;
+    }
+}
+.HTML_
+{
+    @include desktop
+    {
+        @include html_;
+    }
+}
+.fa_
+{
+    @include desktop
+    {
+        @include fa;
+    }
+}
+.css3_
+{
+    @include desktop
+    {
+        @include css3;
+    }
+}
+.sass_
+{
+    @include desktop
+    {
+        @include sass;
+    }
+}
+.b_
+{
+    @include desktop
+    {
+        @include b;
+    }
+}
+
+.JQuery_
+{
+    @include desktop
+    {
+        @include jquery_;
+    }
+}
+.JavaScript_
+{
+    @include desktop
+    {
+        @include javascript_;
+    }
+}
+.Brython_
+{
+    @include desktop
+    {
+        @include brython_;
+    }
+}
+.c_
+{
+    @include desktop
+    {
+        @include c_;
+    }
+}
+.TypeScript_
+{
+    @include desktop
+    {
+        @include typescript_;
+    }
+}
+.NodeJS_
+{
+    @include desktop
+    {
+        @include nodejs_;
+    }
+}
+.Express_
+{
+    @include desktop
+    {
+        @include express_;
+    }
+}
+.Tech_Stack_Used_
+{
+    @include desktop
+    {
+        @include stacks_used_;
+    }
+}
+.a3_
+{
+    @include desktop
+    {
+        @include a3;
+    }   
+}
+.Project_
+{
+    @include desktop{
+        @include projects_;
+    }
+}
+.Project1_
+{
+    @include desktop
+    {
+        @include project1_;
+    }
+}
+.uvcp_
+{
+    @include desktop
+    {
+        @include uvcp;
+    }
+}
+.a_uvcp_
+{
+    @include desktop
+    {
+        @include a_uvcp_;
+    }   
+}
+.Project2_
+{
+    @include desktop
+    {
+        @include project2_;
+    }
+}
+.uvcl_
+{
+    @include desktop
+    {
+        @include uvcl;
+    }
+}
+.a_uvcl_
+{
+    @include desktop
+    {
+        @include a_uvcl__;
+    }
+}
+.Project3_
+{
+    @include desktop
+    {
+        @include project3_;
+    }
+}
+.st_
+{
+    @include desktop
+    {
+        @include st__;
+    }
+}
+.a_st_
+{
+    @include desktop
+    {
+        @include a_st__;
+    }   
+}
+.b3_
+{
+    @include desktop
+    {
+        @include b3;
+    }   
+}
+.Project4_
+{
+    @include desktop
+    {
+        @include project4_;
+    }
+}
+.ps_
+{
+    @include desktop
+    {
+        @include ps__;
+    }           
+}
+.Prooject5_
+{
+    @include desktop
+    {
+        @include project5_;
+    }
+}
+.is_
+{
+    @include desktop
+    {
+        @include is__;
+    }
+}
+.Project6_
+{
+    @include desktop
+    {
+        @include project6_;
+    }
+}
+.cg_
+{
+    @include desktop
+    {
+        @include cg;
+    }
+}
+.a_cg_
+{
+    @include desktop
+    {
+        @include a_cg;
+    }
+}
+.contactme_
+{
+    @include desktop
+    {
+        @include contactme_;    
+    }
+}
+.ContactTitle_{
+    @include desktop
+    {
+        @include ContactTitle;
+    }
+}
+.form_
+{
+    @include desktop
+    {
+        @include form_;
+    }   
+}
+.label_name_
+{
+    @include desktop
+    {
+        @include label_name;
+    }
+}
+.field_names_
+{
+    @include desktop
+    {
+        @include field_name;
+    }
+}
+.label_email_
+{
+    @include desktop
+    {
+        @include label_email_;
+    }
+}
+.field_emails_
+{
+    @include desktop
+    {
+        @include field_emails_;
+    }
+}
+.label_subject_
+{
+    @include desktop
+    {
+        @include label_subject_;
+    }
+}
+.field_subjects_
+{
+    @include desktop
+    {
+        @include field_subjects_;
+    }   
+}
+.label_message_
+{
+    @include desktop
+    {
+        @include label_message_;
+    }
+}
+.field_message_
+{   
+    @include desktop
+    {
+        @include field_message_;
+    }
+}
+.btnsend_{
+    @include desktop
+    {
+        @include btnsend_;
+    }   
+}
+.btnsend_:hover
+{
+    @include desktop
+    {
+        cursor:pointer;
+    }
+}
+.ContactText_
+{
+    @include desktop
+    {
+        @include contacttext_;
+    }
+        
+}
+.getintouch_
+{
+    @include desktop
+    {
+        @include getintouch_;
+    }
+}
+.Email_mailto_
+{
+    @include desktop
+    {
+        @include Email_mailto;
+    }
+}
+.Phone_mobile
+{
+    @include desktop
+    {
+        @include Phone_mobile;
+    }
+}
+.LinkedIn_
+{
+    @include desktop {
+        @include LinkedIn_;
+    }
+}
+.GitHub_
+{
+    @include desktop
+    {
+        @include githubs_;
+    }       
+}
+.footer
+{
+    @include desktop
+    {
+        @include footer;
+    }
+}
+.container
+{
+    @include desktop
+    {
+        @include container;
+    }
+}
+.footer_
+{
+    @include desktop
+    {
+        @include footer_;
+    }
+}
+.copyright_
+{
+    @include desktop
+    {
+        @include copyright_;
+    }
+}
+.powered_by{
+    @include desktop
+    {
+        @include powered_by;
+    }
+}
+.name__
+{
+    @include desktop
+    {
+        @include name__;
+    }
+}
+.popup
+{
+    @include desktop
+    {
+        @include popup;
+    }
+}
+.pop_
+{
+    @include desktop
+    {
+        @include popup_;
+    }       
+}
+.cross
+{
+    @include desktop
+    {
+        @include cross;
+    }
+}
+.cross:hover
+{
+  @include desktop
+  {
+      cursor: pointer !important;
+  }  
+}
