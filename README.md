@@ -1,3 +1,3 @@
 # portfolio-
 A portfolio of my top skills
-https://alexanderkwesi.github.io/portfolio-/templates/portfolio.html
+<a href="https://alexanderkwesi.github.io/portfolio-/templates/portfolio.html">View Website</a>
